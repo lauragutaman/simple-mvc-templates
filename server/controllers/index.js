@@ -32,6 +32,7 @@ const setName = (req, res) => {
 
 };
 
+
 const notFound = (req, res) => {
   return res.status(404).sendFile(path.resolve(`${__dirname}../../views/404.html`));
 };

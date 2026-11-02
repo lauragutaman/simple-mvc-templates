@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{title}}</title>
+</head>
+
+<body>
+    <h1>Page 3</h1>
+    <a href="/">Home</a>
+    <a href="/page1">Page 1</a>
+    <a href="/page2">Page 2</a>
+
+    <h2>Add a Dog</h2>
+    <form action="/createDog" method="POST">
+        <label for="dogName">Name</label>
+        <input type="text" id="dogName" name="name" value="">
+
+        <label for="dogBreed">Breed</label>
+        <input type="text" id="dogBreed" name="breed" value="">
+
+        <label for="dogAge">Age</label>
+        <input type="number" id="dogAge" name="age" min="0" value="">
+
+        <input type="submit" value="Create Dog">
+
+    </form>
+
+    {{!-- Form 2: search up dog by name and increase the age by 1 --}}
+
+    <h2>Change Dog's Age</h2>
+    <form action="/changeDogAge" method="POST">
+        <label for="lookupName"> Dog's Name </label>
+        <input type="text" id="lookupName" name="name" value="">
+
+        <input type="submit" value="Increase Age">
+    </form>
+</body>
+
+</html>
